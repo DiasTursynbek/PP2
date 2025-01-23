@@ -1,0 +1,17 @@
+; #git add "1 lab py/casting.py"
+
+; git commit -m "Обновил файлы лабораторной работы"
+
+; git push origin main
+
+
+
+
+
+; if you need to remove 
+
+; git rm -r "1 lab py"  file's name
+; git rm -r "2 lab py"
+
+; git commit -m "Удалил директории 1 lab py и 2 lab py из репозитория"
+; git push

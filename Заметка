@@ -1,5 +1,0 @@
-#git add "1 lab py/casting.py"
-
-git commit -m "Обновил файлы лабораторной работы"
-
-git push origin main

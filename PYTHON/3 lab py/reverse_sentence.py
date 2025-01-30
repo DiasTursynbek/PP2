@@ -1,0 +1,5 @@
+def reverse_sentence(sentence):
+    return ' '.join(sentence.split()[::-1])
+
+# Проверка
+print(reverse_sentence("We are ready"))  # "ready are We"

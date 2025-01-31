@@ -1,5 +1,5 @@
 def has_33(nums):
-    for i in range(len(nums) - 1):
+    for i in range(len(nums) - 1):  #index==len  bolu ushin
         if nums[i] == nums[i+1] == 3:
             return True
     return False

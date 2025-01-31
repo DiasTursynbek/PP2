@@ -1,5 +1,5 @@
 def is_palindrome(word):
-    return word == word[::-1]
+    return word == word[::-1]    #madam == madam      #hello != olleh
 
 # Проверка
 print(is_palindrome("madam"))  # True

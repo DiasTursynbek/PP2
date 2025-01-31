@@ -5,14 +5,14 @@ class BankAccount:
 
     def deposit(self, amount):
         self.balance += amount
-        print(f"Депозит {amount}. Новый баланс: {self.balance}")
+        print(f"Deposit {amount}. New balance: {self.balance}")
 
-    def withdraw(self, amount):
+    def withdraw(self, amount):    #withdraw() (снятие денег)
         if amount > self.balance:
-            print("Недостаточно средств!")
+            print("Insufficient funds!")
         else:
             self.balance -= amount
-            print(f"Снятие {amount}. Новый баланс: {self.balance}")
+            print(f"Withdrawal {amount}. New balance: {self.balance}")
 
 acc = BankAccount("Alice", 100)
 acc.deposit(50)

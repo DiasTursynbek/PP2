@@ -5,4 +5,4 @@ def print_permutations(s):
         print(''.join(p))
 
 # Проверка
-print_permutations("abc")
+print_permutations("abc")     #abc acb bac bca cab cba   

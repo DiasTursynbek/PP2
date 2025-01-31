@@ -9,7 +9,7 @@ set1.add("orange")
 
 print('\n', '____________________________', '\n')
 
-fruits = {'apple', 'banana', 'qwerty'}
+fruits = {'apple', 'banana', 'cherry'}
 tropical = {'pineapple', 'kiwi'}
 fruits.update(tropical)
 print(fruits)

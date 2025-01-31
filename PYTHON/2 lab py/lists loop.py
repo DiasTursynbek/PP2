@@ -14,7 +14,7 @@ print(newlist)
 
 print('\n', '____________________________', '\n')
 
-list = (1, 2, 5, 4, 3, 2, 8)
+list = [1, 2, 5, 4, 3, 2, 8]
 list.sort()
 print(list)
 list.sort(reverse=True)

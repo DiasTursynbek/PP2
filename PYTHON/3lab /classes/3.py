@@ -16,4 +16,4 @@ class Rectangle(Shape):
 rect = Rectangle(4, 5)
 
 # Вызываем метод area() и печатаем результат
-print(rect.area())  # Ожидаемый вывод: 20
+print(rect.area())  

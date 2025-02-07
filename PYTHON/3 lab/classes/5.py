@@ -1,5 +1,5 @@
 class BankAccount:
-    def __init__(self, owner, balance=0):
+    def __init__(self, owner, balance):
         self.owner = owner
         self.balance = balance
 
@@ -14,7 +14,9 @@ class BankAccount:
             self.balance -= amount
             print(f"Withdrawal {amount}. New balance: {self.balance}")
 
-acc = BankAccount("Alice", 100)
-acc.deposit(50)
-acc.withdraw(30)
-acc.withdraw(200)
+
+
+acc = BankAccount("Alice", 100000)
+acc.deposit(5000)
+acc.withdraw(2000)
+acc.withdraw(5000)

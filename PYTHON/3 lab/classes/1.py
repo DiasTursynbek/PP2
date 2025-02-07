@@ -1,4 +1,4 @@
-class classss:
+class Сlassss:
     def __init__(classss):
         classss.string = ""
 
@@ -8,6 +8,6 @@ class classss:
     def printString(classss):
         print(classss.string.upper())
 
-obj = classss()
+obj = Сlassss()
 obj.getString()
 obj.printString()

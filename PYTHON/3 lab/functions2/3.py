@@ -80,7 +80,6 @@ movies = [
 
 def category(coteg,movies):
     for i in movies:
-        if i['category'] == coteg:
+        if i["category"]==coteg:
             print(i, '\n')
-
-category(input('Category:'),movies)
+category(input("Category:"), movies)

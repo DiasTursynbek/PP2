@@ -77,7 +77,7 @@ movies = [
 }
 ]
 def score(movies):
-    result =[]
+    result=[]
     for movie in movies:
         if movie["imdb"]>5.5:
             result.append(movie)

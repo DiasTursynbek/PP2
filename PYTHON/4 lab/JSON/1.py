@@ -1,14 +1,69 @@
 import json
 with open("/Users/diastursynbek/Downloads/KBTU/PP2/PYTHON/4 lab/JSON/sample-data.json", "r") as f:
     data = json.load(f)
-
-for item in data["imdata"]:
-    attr = item["l1PhysIf"]["attributes"]
+print("Inherit status")
+print("="*84)
+DN="DN"
+Description="Description"
+Speed="Speed"
+MTU="MTU"
+print(f"{DN:50} {Description:20} {Speed:7} {MTU:10}") 
+print("-"*84)
+for item in data["imdata"]:  #imdata is key which contain list of elements
+    attr = item["l1PhysIf"]["attributes"]  #attr == attributes     attributes is dictionary
     dn = attr.get("dn")
     descr = attr.get("descr")
     speed = attr.get("speed")
     mtu = attr.get("mtu")
-    print(f"{dn:50} {descr:3} {speed:7} {mtu}")
+    print(f"{dn:50} {descr:20} {speed:7} {mtu:10}")       #{variable:width} -->  определяют ширину столбцов при выводе данных
+
+# #     Метод	  |         Описание	       |         Входной аргумент |	       Пример использования       |
+# # --------------|----------------------------|--------------------------|-----------------------------------|
+# #  json.load(f) | Загружает JSON из файла	   |    Файловый объект	      |       json.load(f)                |
+# # json.loads(s) |	Загружает JSON из строки   |       Строка JSON	      | json.loads('{"name": "Alice"}')   |
+
+
+
+                                                # отличия между load and dump
+#          Метод	  |                            Что делает?	                             |     Аргументы	 |          Пример
+# ------------------|----------------------------------------------------------------------|-------------------|--------------------------
+# json.load(f)	  |         Читает JSON из файла и превращает его в Python-объект	     |   Файловый объект |  (f)	data = json.load(f)
+# json.dump(obj, f) |	Записывает Python-объект в файл в формате JSON	Объект Python (obj), |   файловый объект |  (f)	json.dump(data, f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import json
+# with open ("/Usersdiastursynbek/Downloads/KBTU/PP2/PYTHON/4 lab/JSON/sample-data.json", "r") as file:
+#     data = json.load(file)
+
+
+# for item in data["imdata"]:
+#     attr= item["l1PhysIf"]["attributes"]
+#     dn= attr.get("dn")
+#     descr= attr.get("descr")
+#     speed= attr.get("speed")
+#     mtu= attr.get("mtu")
+#     print(f"{dn:50}{descr:3}{speed:7}{mtu}")
+    
+
 
 
 

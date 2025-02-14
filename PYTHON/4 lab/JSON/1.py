@@ -1,10 +1,7 @@
 import json
 with open("/Users/diastursynbek/Downloads/KBTU/PP2/PYTHON/4 lab/JSON/sample-data.json", "r") as f:
     data = json.load(f)
-print("Inherit status")
-print("-"*67)
-print("DN")
-print("-"*67)
+
 for item in data["imdata"]:
     attr = item["l1PhysIf"]["attributes"]
     dn = attr.get("dn")

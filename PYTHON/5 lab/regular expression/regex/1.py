@@ -1,2 +1,5 @@
 import re
-print(re.fullmatch(r'ab*', 'abbb')) 
+pattern = r"^(ab*$)"
+strings=["abc","abccc","abbbbbb","abcdefg"]
+for i in strings:
+    print(f"{bool(re.match(pattern, i))}")

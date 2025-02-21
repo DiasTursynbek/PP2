@@ -1,2 +1,6 @@
 import re
-print(re.sub(r'(?<!^)(?=[A-Z])', ' ', 'HelloWorldTest'))
+
+def insert_spaces(s):
+    return re.sub(r"([a-z])([A-Z])", r"\1 \2", s)
+
+print(insert_spaces("HelloWorldAlpdir"))

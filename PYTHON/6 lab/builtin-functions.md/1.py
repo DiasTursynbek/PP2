@@ -1,8 +1,9 @@
 import math
-numbers = list(map(int, input("Введите числа через пробел: ").split()))
-result = math.prod(numbers) #prod=product
+numbers = list(map(int,input("put the number: ").split()))
+result = math.prod(numbers)
+print(result)
 
-print(f"Произведение чисел: {result}")
+
 
 
 

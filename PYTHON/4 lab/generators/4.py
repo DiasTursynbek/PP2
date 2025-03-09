@@ -1,11 +1,10 @@
-def squares(a, b):
-    for i in range(a, b + 1):
-        yield i ** 2  # Возвращает квадрат числа
 
-# Вводим диапазон
-a = int(input("Введите a: "))
-b = int(input("Введите b: "))
+def square(a,b):
+    for i in range(a,b+1):
+        yield i**2
+a=int(input("put the a: "))
+b=int(input("put the b: "))
 
-# Используем генератор в цикле for
-for square in squares(a, b):
-    print(square, end=" ")
+
+for ii in square(a,b):
+    print(ii,end=" ")

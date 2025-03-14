@@ -11,6 +11,7 @@ pygame.display.set_caption("Moving Ball task 3")
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 
+
 # Настройки шара
 ball_radius = 25
 ball_x, ball_y = WIDTH // 2, HEIGHT // 2

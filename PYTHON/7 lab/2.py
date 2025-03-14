@@ -14,6 +14,7 @@ pygame.mixer.init()
 # Путь к папке с музыкой
 music_folder = "/Users/diastursynbek/Downloads/KBTU/PP2/PYTHON/7lab/"
 
+
 # Список песен
 songs = [
     '/Users/diastursynbek/Downloads/KBTU/PP2/PYTHON/7 lab/Lady_Gaga_Bruno_Mars_-_Die_With_A_Smile_78229086.mp3',

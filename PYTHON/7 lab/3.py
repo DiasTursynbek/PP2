@@ -2,17 +2,14 @@ import pygame
 
 pygame.init()
 
-# Настройки экрана
 WIDTH, HEIGHT = 500, 500
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Moving Ball task 3")
 
-# Цвета
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 
 
-# Настройки шара
 ball_radius = 25
 ball_x, ball_y = WIDTH // 2, HEIGHT // 2
 speed = 20
@@ -21,7 +18,7 @@ running = True
 while running:
     screen.fill(WHITE)
 
-    # Рисуем шар
+
     pygame.draw.circle(screen, RED, (ball_x, ball_y), ball_radius)
 
     pygame.display.flip()
@@ -38,5 +35,6 @@ while running:
                 ball_x -= speed
             elif event.key == pygame.K_RIGHT and ball_x + ball_radius + speed <= WIDTH:
                 ball_x += speed
+                
 
 pygame.quit()

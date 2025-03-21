@@ -19,10 +19,10 @@ def rotate_hand(image, angle, pivot):
     rotated_image = pygame.transform.rotate(image, -angle)
     new_rect = rotated_image.get_rect(center=pivot)
     return rotated_image, new_rect
-
 running = True
 while running:
-    screen.blit(clock_image, (0, 0))  # Фонды салу
+    
+    screen.blit(clock_image, (0, 0)) 
 
     current_time = time.localtime()
     minutes = current_time.tm_min
@@ -46,6 +46,12 @@ while running:
             running = False
 pygame.quit()
 sys.exit()
+
+
+
+
+
+
 
 
 

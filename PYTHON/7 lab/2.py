@@ -3,11 +3,9 @@ import os
 
 pygame.init()
 
-
+pygame.display.set_caption("Music Player Task 2")
 WIDTH, HEIGHT = 700, 500
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Music Player Task 2")
-
 
 pygame.mixer.init()
 
@@ -28,9 +26,7 @@ if not songs:
 
 current_song = 0  
 
-
 background_path = os.path.join(music_folder, "/Users/diastursynbek/Downloads/KBTU/PP2/PYTHON/7 lab/5a3c04c4a24fd912ee541dd5_5ac5a5bdc43d3.jpg")
-
 
 if os.path.exists(background_path):
     background = pygame.image.load(background_path)
@@ -39,9 +35,6 @@ else:
     print("Ошибка: Файл фона не найден! Используется черный экран.")
     background = pygame.Surface((WIDTH, HEIGHT))
     background.fill((0, 0, 0))  # Черный фон
-
-
-
 
 def play_music():
     """Проигрывает текущую песню."""
@@ -69,7 +62,6 @@ def prev_song():
     current_song = (current_song - 1) % len(songs)
     print("Previous song:", songs[current_song])
     play_music()
-
 
 
 play_music()

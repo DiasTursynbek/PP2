@@ -3,12 +3,16 @@ import sys
 import time
 pygame.init() #include pygame
 
-WIDTH, HEIGHT = 1200, 900
-CENTER = (WIDTH // 2, HEIGHT // 2)
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
 pygame.display.set_caption("Mickey Mouse Clock")
+WIDTH, HEIGHT = 1200, 900
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
+CENTER = (WIDTH // 2, HEIGHT // 2)
+
+
 clock_image = pygame.image.load("/Users/diastursynbek/Downloads/KBTU/PP2/PYTHON/7 lab/clock.png")
-clock_image = pygame.transform.scale(clock_image, (WIDTH, HEIGHT))
+clock_image = pygame.transform.scale(clock_image, (WIDTH, HEIGHT))     #  -->  Бұл функция суретті қажетті өлшемге созады немесе кішірейтеді.
 minute_hand = pygame.image.load('/Users/diastursynbek/Downloads/KBTU/PP2/PYTHON/7 lab/min_hand.png')  
 second_hand = pygame.image.load('/Users/diastursynbek/Downloads/KBTU/PP2/PYTHON/7 lab/sec_hand.png')  
 minute_hand = pygame.transform.scale(minute_hand, (700, 700))  
@@ -16,13 +20,14 @@ second_hand = pygame.transform.scale(second_hand, (650, 650))
 
 def rotate_hand(image, angle, pivot):
     """Сағат тілдерін айналдыру функциясы."""
-    rotated_image = pygame.transform.rotate(image, -angle)
-    new_rect = rotated_image.get_rect(center=pivot)
+    rotated_image = pygame.transform.rotate(image, -angle)     # -angle --> Себебі, pygame-да айналу бағыты сағат тіліне қарсы жүреді,
+    new_rect = rotated_image.get_rect(center=pivot)            # --> 	get_rect(center=pivot) — бұралған суреттің орнын сағаттың ортасына (pivot) дәл келтіріп қайта қояды. 	•	Егер осы жолды жазбасақ, сурет айналған кезде жылжып кетеді.
     return rotated_image, new_rect
+
 running = True
 while running:
     
-    screen.blit(clock_image, (0, 0)) 
+    screen.blit(clock_image, (0, 0))  # --> Бұл жол арқылы біз сағаттың негізгі суретін (фонды) экранға (0,0) координатасынан бастап салып қойдық.
 
     current_time = time.localtime()
     minutes = current_time.tm_min
@@ -35,11 +40,12 @@ while running:
 
     # Тілдерді экранға шығару
     rotated_minute_hand, minute_rect = rotate_hand(minute_hand, minute_angle, CENTER)
-    screen.blit(rotated_minute_hand, minute_rect.topleft)
+    screen.blit(rotated_minute_hand, minute_rect.topleft) # --> topleft — суреттің жоғарғы сол жақ бұрыш координаты, осы жерден бастап сурет экранға салынады.
 
     rotated_second_hand, second_rect = rotate_hand(second_hand, second_angle, CENTER)
     screen.blit(rotated_second_hand, second_rect.topleft)
-    pygame.display.flip()
+    
+    pygame.display.flip() # --> экранды жаңарту.
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

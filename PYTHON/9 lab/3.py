@@ -6,7 +6,7 @@ pygame.init()
 
 
 screen = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("paint")
+pygame.display.set_caption("paintqoi")
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
@@ -120,7 +120,7 @@ while True:
                 pygame.draw.line(screen, current_color, last_pos, event.pos, brush_size)
                 last_pos = event.pos
             elif mode == "eraser":
-                pygame.draw.line(screen, WHITE, last_pos, event.pos, brush_size * 2)
+                pygame.draw.line(screen, WHITE, last_pos, event.pos, brush_size * 3)
                 last_pos = event.pos
 
     pygame.display.update()

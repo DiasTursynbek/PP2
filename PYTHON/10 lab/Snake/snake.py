@@ -1,3 +1,6 @@
+from db import get_or_create_user, save_score
+
+user_id = get_or_create_user()  # Ойын басталғанда сұрайды
 import pygame
 import random
 import sys
@@ -104,3 +107,6 @@ while True:
 
     pygame.display.flip()
     clock.tick(speed)
+
+
+save_score(user_id, level, score)
